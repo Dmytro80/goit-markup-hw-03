@@ -60,7 +60,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
 }
 
 .section {
@@ -366,11 +365,17 @@ img {
 
 /* -------------------PORFOLIO------------------- */
 
-.filter-box {
-  margin-bottom: 34px;
+.filter-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 }
 
-.btn {
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btn {
   font-family: inherit;
   font-weight: 500;
   font-size: var(--secondary-font-size);
@@ -384,23 +389,47 @@ img {
   border-radius: 4px;
   padding: 6px 22px;
 }
-.btn:hover,
-.btn:focus {
+
+.filter-btn:hover,
+.filter-btn:focus {
   color: var(--secondary-title-color);
   background-color: var(--accent-link-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.filter.current {
+
+.filter-btn.current {
   color: var(--secondary-title-color);
   background-color: var(--accent-link-color);
 }
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--typical-margin));
+  margin-bottom: calc(-1 * var(--typical-margin));
+}
+
+.work-item {
+  flex-basis: calc(100% / 3 - var(--typical-margin));
+  margin-left: var(--typical-margin);
+  margin-bottom: var(--typical-margin);
+  background: var(--primary-background-color);
+  border: 1px solid #eeeeee;
+}
+
+.work-content {
+  padding: 20px 24px;
+}
+
 .work-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: var(--secondary-letter-spacing);
   color: var(--main-title-color);
+  margin-bottom: 4px;
 }
+
 .work-text {
   font-size: var(--secondary-font-size);
   line-height: 1.88;
